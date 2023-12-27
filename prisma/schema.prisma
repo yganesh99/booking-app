@@ -8,7 +8,80 @@ generator client {
 }
 
 model User {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  email   String   @unique
-  password    String?
+  id               String       @id @default(auto()) @map("_id") @db.ObjectId
+  email            String       @unique
+  password         String?
+  firstName        String?
+  lastName         String?
+  phone            String?
+  profilePictureUrl String?
+  userType         String?
+  lastLoginDate    DateTime?
+  dateCreated      DateTime?
+  dateModified     DateTime?
+}
+
+model RentalProperty {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  description    String
+  type           String
+  address        String
+  city           String
+  state          String
+  country        String
+  pricePerNight  Float
+  noOfGuests     Int
+  noOfBedrooms   Int
+  noOfBathrooms  Int
+  checkInTime    DateTime    
+  dateCreated    DateTime
+  dateModified   DateTime?
+}
+
+model Booking {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  propertyId    String
+  userId        String
+  checkInDate   DateTime
+  checkOutDate  DateTime
+  totalPrice    Float
+  status        String
+  dateCreated   DateTime
+  dateModified  DateTime?
+}
+
+model Amenity {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  description  String?
+  dateCreated  DateTime
+  dateModified DateTime?
+}
+
+model PropertyAmenity {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  propertyId     String
+  amenityId      String
+  dateCreated    DateTime
+  dateModified   DateTime?
+}
+
+model Availability {
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  propertyId       String
+  availabilityDate DateTime
+  status           String
+  dateCreated      DateTime
+  dateModified     DateTime?
+}
+
+model Review {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  propertyId   String
+  userId       String
+  rating       Int
+  comment      String?
+  dateCreated  DateTime
+  dateModified DateTime?
 }
