@@ -1,10 +1,12 @@
-import Home from './(home)/page'
+'use client'
+
+import LandingPage from '../components/LandingPage/LandingPage'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <Home/>
+      <LandingPage/>
     </div>
   )
 }

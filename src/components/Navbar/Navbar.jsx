@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react';
-import logo from '@/assets/logo1.png'
-import search from '@/assets/search.png'
+import logo from '../../assets/logo1.png'
+import search from '../../assets/search.png'
 import Image from 'next/image'
 import { usePathname  } from 'next/navigation'
 
