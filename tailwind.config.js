@@ -20,6 +20,12 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        'sm': '640px', // Small devices (like mobile phones)
+        'md': '768px', // Tablets
+        'lg': '1024px', // Desktops and small screens
+        'xl': '1280px', // Larger desktops and screens
+      },
       fontFamily: {
         sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
       },
