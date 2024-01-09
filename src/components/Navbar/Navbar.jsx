@@ -1,14 +1,21 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import logo from '../../assets/logo1.png'
 import search from '../../assets/search.png'
 import Image from 'next/image'
 import { usePathname  } from 'next/navigation'
 
 const Navbar = () => {
-  const pathname = usePathname()
-  const isAvailableRoute = pathname !== '/';
+
+  const [isAvailableRoute, setIsAvailableRoute] = useState(false);
+  const pathname = usePathname();
+
+ 
+  useEffect(()=> {
+    const isAvailableRoute = pathname !== '/' && pathname !=='/auth' && pathname !=='/sign-in' && pathname !=='/sign-up' ;
+    setIsAvailableRoute(isAvailableRoute);
+  },[]);
 
   return (
     <nav className="sticky top-0 z-50 bg-white">

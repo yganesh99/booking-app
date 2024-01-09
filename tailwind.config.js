@@ -21,6 +21,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'xs': '300px',
         'sm': '640px', // Small devices (like mobile phones)
         'md': '768px', // Tablets
         'lg': '1024px', // Desktops and small screens
@@ -28,6 +29,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },

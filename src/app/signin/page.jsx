@@ -1,8 +1,8 @@
 'use client'
 
 import React, {useState} from 'react'
-import TextInput from '../../../components/TextInput/TextInput';
-import ButtonType1 from '../../../components/ButtonType1/ButtonType1';
+import TextInput from '../../components/TextInput/TextInput';
+import ButtonType1 from '../../components/ButtonType1/ButtonType1';
 
 const signin = ({email}) => {
 
