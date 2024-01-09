@@ -8,7 +8,7 @@ import { usePathname  } from 'next/navigation'
 
 const Navbar = () => {
   const pathname = usePathname()
-  const isAvailableRoute = pathname === '/rental-properties';
+  const isAvailableRoute = pathname !== '/';
 
   return (
     <nav className="sticky top-0 z-50 bg-white">
